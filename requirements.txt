@@ -1,0 +1,6 @@
+fastapi
+tavily-python
+groq
+python-dotenv
+uvicorn[standard]
+sendgrid
