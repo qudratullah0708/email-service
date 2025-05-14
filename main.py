@@ -12,12 +12,27 @@ from dotenv import load_dotenv
 app = FastAPI()
 
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://email-service-bice.vercel.app"],  # Replace with your frontend origin in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 
 # Load environment variables
 load_dotenv()
 
 email_password = os.getenv("EMAIL_APP_PASSWORD")  # Add this to your .env file
 
+
+@app.get("/")
+def Home():
+    print("Running Email Service...")
 
 
 @app.post("/send-email")
