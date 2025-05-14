@@ -32,7 +32,7 @@ email_password = os.getenv("EMAIL_APP_PASSWORD")  # Add this to your .env file
 
 @app.get("/")
 def Home():
-    print("Running Email Service...")
+    return "Running Email Service..."
 
 
 @app.post("/send-email")
