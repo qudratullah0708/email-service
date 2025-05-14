@@ -16,7 +16,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://email-service-bice.vercel.app"],  # Replace with your frontend origin in production
+    allow_origins=["https://lead-genius-suite.vercel.app"],  # Replace with your frontend origin in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
