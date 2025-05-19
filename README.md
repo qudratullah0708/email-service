@@ -5,4 +5,5 @@
    ### uv venv 
   ###  source .venv/Scripts/activate
   ###  uv add - r requriements.txt
+### configure  env ( EMAIL_APP_PASSWORD='your-email-password' )
  ###   uvicorn main:app --reload
